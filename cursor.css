@@ -1,0 +1,28 @@
+#cursor_dot{
+    width: 5px;
+    height: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-backdrop-filter: invert();
+    backdrop-filter: invert();
+}
+#cursor_outline{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #12131a;
+    border: 2px solid white;
+}
