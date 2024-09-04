@@ -44,20 +44,24 @@ body{
 }
 
 .main_bg_video{
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
     z-index: -1;
 }
 
 .about-us{
-    /* background-color: black;
-    color: white; */
+    color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#e2e2e2 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #e2e2e2 1.2000000000000002px, #ffffff 1.2000000000000002px) -0.6000000000000001px 0;
-    background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    margin-left: clamp(20px, 6vw, 200px);
+    margin-right: clamp(20px, 6vw, 200px);
+    /* background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#e2e2e2 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #e2e2e2 1.2000000000000002px, #ffffff 1.2000000000000002px) -0.6000000000000001px 0; */
+    /* background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px; */
 }
 
 .head-block{
@@ -70,7 +74,7 @@ body{
 
 .head-1{
     font-size: 20px;
-    color: #626262;
+    color: rgb(160, 160, 160);
     font-weight: 400;
     margin-top: 15px;
     margin-bottom: 0px;
@@ -86,8 +90,8 @@ body{
 }
 
 .abtus-desc{
-    padding-right: clamp(40px, 10vw, 200px);
-    padding-left: clamp(40px, 10vw, 200px);
+    padding-right: clamp(30px, 4vw, 60px);
+    padding-left: clamp(40px, 4vw, 60px);
     text-align: justify;
     font-size: clamp(15px, 3vw, 25px);
 }
@@ -106,7 +110,8 @@ body{
     flex-direction: column;
     align-items: center;
     padding-bottom: 50px;
-    background-color: black;
+    margin-bottom: 50px;
+    /* background-color: black; */
     color: white;
 }
 
@@ -162,6 +167,7 @@ body{
     justify-content: center;
     font-size: 24px;
     transform: rotateY(0deg);
+    background-size: cover;
 }
 
 .card-back {
@@ -184,6 +190,34 @@ body{
     right: 15px;
 }
 
+.card-front-events{
+    background-image: url("/assets/events_bg.png");
+}
+
+.card-front-technical{
+    background-image: url("/assets/technical_bg.png");
+}
+
+.card-front-finance{
+    background-image: url("/assets/finance_bg.png");
+}
+
+.card-front-design{
+    background-image: url("/assets/design_bg.png");
+}
+
+.card-front-creative{
+    background-image: url("/assets/creative_bg.png");
+}
+
+.card-front-editorial{
+    background-image: url("/assets/editorial_bg.png");
+}
+
+.card-front-social{
+    background-image: url("/assets/social_bg.png");
+}
+
 .arrow{
     height: 1rem;
     position: relative;
@@ -191,18 +225,31 @@ body{
     scale: 0.8;
 }
 
-.boards{
+.boards, .faculty{
+    color: white;
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#e2e2e2 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #e2e2e2 1.2000000000000002px, #ffffff 1.2000000000000002px) -0.6000000000000001px 0;
-    background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
+    /* background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#e2e2e2 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #e2e2e2 1.2000000000000002px, #ffffff 1.2000000000000002px) -0.6000000000000001px 0;
+    background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px; */
+    border: 1px solid gray;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    margin-left: clamp(20px, 6vw, 200px);
+    margin-right: clamp(20px, 6vw, 200px);
+}
+
+.faculty{
+    width: clamp(300px, 30vw, 500px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
 }
 
 .italics{
     font-style: italic;
-    color: #626262;
+    color: #888888;
 }
 
 .board-members{
@@ -234,7 +281,7 @@ body{
 }
 
 .board-pfp{
-    height: clamp(200px, 5vw, 250px);
+    height: clamp(180px, 5vw, 250px);
     aspect-ratio: 94 / 125;
     object-fit: cover;
 }
@@ -262,10 +309,11 @@ body{
     width: 35vw;
     aspect-ratio: 16 / 9;
     object-fit: cover;
+    border: 1px solid gray;
 }
 
 .board-members-link{
-    color: black;
+    color: white;
     height: fit-content;
 }
 
@@ -276,29 +324,10 @@ body{
 
 .events{
     color: white;
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.achievements-banner{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 15px 15px, linear-gradient(#e2e2e2 1.2000000000000002px, transparent 1.2000000000000002px) 0 -0.6000000000000001px, linear-gradient(90deg, #e2e2e2 1.2000000000000002px, #ffffff 1.2000000000000002px) -0.6000000000000001px 0;
-    background-size: 30px 30px, 30px 30px, 15px 15px, 15px 15px;
-}
-
-.banner-text{
-    font-size: clamp(30px, 4vw, 45px);
-    font-weight: bolder;
-}
-
-.underline{
-    border-bottom: 2px solid black;
 }
 
 .notices{
@@ -359,8 +388,8 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 40px;
     background-color: #2b2b2b;
@@ -369,7 +398,7 @@ body{
 
 
 .footer-logo{
-    height: 100px;
+    height: 70px;
 }
 
 .contact{
@@ -402,13 +431,6 @@ body{
 @media screen and (max-width: 1020px) {
     .board-members{
         flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 980px) {
-    .achievements-banner{
-        flex-direction: column;
-        gap: 30px;
     }
 }
 
